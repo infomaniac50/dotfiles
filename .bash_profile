@@ -1,3 +1,5 @@
+# vim:set filetype=sh:
+
 # We need to do two things here:
 
 # 1. Ensure ~/.bash/env gets run first
@@ -19,4 +21,3 @@ BASH_ENV=
 if [ "$PS1" ]; then
     . ~/.bash/interactive
 fi
-

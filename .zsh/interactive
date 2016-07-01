@@ -1,2 +1,4 @@
+# vim:set filetype=sh:
+
 . ~/.shell/interactive
 echo "hello world"
