@@ -1,0 +1,13 @@
+.bitbucket-cli filter=git-crypt diff=git-crypt
+.bitbucket.py filter=git-crypt diff=git-crypt
+.bucket filter=git-crypt diff=git-crypt
+.dockercfg filter=git-crypt diff=git-crypt
+.dockercfg filter=git-crypt diff=git-crypt
+.exports/secrets.sh filter=git-crypt diff=git-crypt
+.gitconfig filter=git-crypt diff=git-crypt
+.gitspindle filter=git-crypt diff=git-crypt
+.globalrc filter=git-crypt diff=git-crypt
+.ngrok filter=git-crypt diff=git-crypt
+.npmrc filter=git-crypt diff=git-crypt
+.tutum filter=git-crypt diff=git-crypt
+.xinputrc filter=git-crypt diff=git-crypt
