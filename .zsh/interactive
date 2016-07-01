@@ -1,0 +1,2 @@
+. ~/.shell/interactive
+echo "hello world"

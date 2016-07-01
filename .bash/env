@@ -1,0 +1,4 @@
+# vim:set filetype=sh:
+
+# WARNING: this will $BASH_ENV to get a correct startup sequence
+. ~/.shell/env
