@@ -1,11 +1,11 @@
 # vim:set filetype=sh:
 
-export PATH=$HOME/prefix/sbin:$HOME/prefix/bin:$HOME/prefix/usr/local/bin:$PATH
+pathprepend $HOME/prefix/sbin:$HOME/prefix/bin:$HOME/prefix/usr/local/bin PATH
 
 brew_prefix=$(brew --prefix)
 
-if [ -f "$brew_prefix/etc/bash_completion" ]; then
-    . "$brew_prefix/etc/bash_completion"
-fi
+ssource "$brew_prefix/etc/bash_completion"
+
+if which fasd > /dev/null; then eval "$(fasd --init auto)"; fi
 
 unset brew_prefix

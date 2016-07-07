@@ -1,3 +1,3 @@
 # vim:set filetype=sh:
 
-export PATH=$HOME/.cabal/bin:$PATH
+pathprepend $HOME/.cabal/bin PATH

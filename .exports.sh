@@ -1,7 +1,7 @@
 # vim:set filetype=sh:
 
-. ${HOME}/.exports/eload.sh
-. ${HOME}/.exports/secrets.sh
+ssource ${HOME}/.exports/eload.sh
+ssource ${HOME}/.exports/loader.sh
+ssource ${HOME}/.exports/secrets.sh
 
-eload loader
-alias loaderdefault='loader brew fasd phpbrew composer node pypi golang cabel rvm'
+alias loaderdefault='loader brew rvm cabel golang pypi node composer phpbrew'

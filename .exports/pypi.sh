@@ -1,3 +1,3 @@
 # vim:set filetype=sh:
 
-export PATH=$HOME/.local/bin:$PATH
+pathprepend $HOME/.local/bin PATH
