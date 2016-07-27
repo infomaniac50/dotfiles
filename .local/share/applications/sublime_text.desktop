@@ -5,7 +5,7 @@ Name=Sublime Text
 GenericName=Text Editor
 Comment=Sophisticated text editor for code, markup and prose
 Icon=sublime-text
-Exec=/bin/sh -c "export PATH=/home/derek/.phpbrew/php/php-5.6.15/bin:/home/derek/.phpbrew/bin:/home/derek/.composer/vendor/bin:/home/derek/.npm-packages/bin:$PATH && /opt/sublime_text/sublime_text %F"
+Exec=/bin/bash -c '. ${HOME}/.phpbrew/bashrc && export PATH=${HOME}/.composer/vendor/bin:${HOME}/.npm-packages/bin:$PATH && exec /opt/sublime_text/sublime_text %F'
 NoDisplay=false
 Categories=Development;TextEditor;
 MimeType=text/plain;

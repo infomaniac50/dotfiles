@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Atom
 Comment=A hackable text editor for the 21st century
-Exec=/bin/sh -c 'export PATH=${HOME}/.phpbrew/php/php-7.0.9/bin:${HOME}/.phpbrew/bin:${HOME}/.composer/vendor/bin:${HOME}/.npm-packages/bin:$PATH && exec /opt/atom/atom %F'
+Exec=/bin/bash -c '. ${HOME}/.phpbrew/bashrc && export PATH=${HOME}/.composer/vendor/bin:${HOME}/.npm-packages/bin:$PATH && exec /opt/atom/atom %F'
 Icon=atom
 Type=Application
 StartupNotify=true
