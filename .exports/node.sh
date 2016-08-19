@@ -8,3 +8,4 @@ export NPM_PACKAGES="$HOME/.npm-packages"
 
 pathprepend $NPM_PACKAGES/lib/node_modules NODE_PATH
 pathprepend $NPM_PACKAGES/bin PATH
+pathprepend node_modules/.bin
