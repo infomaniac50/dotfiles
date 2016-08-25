@@ -1,0 +1,5 @@
+alias tshlist='trash-list'
+alias tshempty='trash-empty'
+alias tsh='trash'
+alias tshrm='trash-rm'
+alias tshput='trash-put'
