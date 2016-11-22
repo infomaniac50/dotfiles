@@ -11,4 +11,3 @@
 
 . ~/.bash/env
 . ~/.bash/interactive
-source /home/derek/.rack/bash_autocomplete
