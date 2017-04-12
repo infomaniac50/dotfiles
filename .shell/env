@@ -11,6 +11,6 @@ export BASH_ENV=~/.bash/env
 
 . ~/.shell/env_functions
 
-umask 0077
+umask 0022
 
 ssource ~/.shell/env_local
