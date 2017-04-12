@@ -5,8 +5,6 @@ pathprepend $HOME/.linuxbrew/share/man MANPATH
 pathprepend $HOME/.linuxbrew/share/info INFOPATH
 pathprepend $HOME/.linuxbrew/share XDG_DATA_DIRS
 
-pathprepend $HOME/prefix/sbin:$HOME/prefix/bin:$HOME/prefix/usr/local/bin PATH
-
 brew_prefix=$(brew --prefix)
 
 ssource "$brew_prefix/etc/bash_completion"
