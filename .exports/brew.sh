@@ -1,11 +1,11 @@
 # vim:set filetype=sh:
 
-pathprepend $HOME/.linuxbrew/bin PATH
-pathprepend $HOME/.linuxbrew/share/man MANPATH
-pathprepend $HOME/.linuxbrew/share/info INFOPATH
-pathprepend $HOME/.linuxbrew/share XDG_DATA_DIRS
-
 brew_prefix=$(brew --prefix)
+
+pathprepend $brew_prefix/bin PATH
+pathprepend $brew_prefix/share/man MANPATH
+pathprepend $brew_prefix/share/info INFOPATH
+pathprepend $brew_prefix/share XDG_DATA_DIRS
 
 ssource "$brew_prefix/etc/bash_completion"
 
