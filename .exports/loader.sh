@@ -22,3 +22,17 @@ function loader
     eload $file
   done
 }
+
+function loaderctl()
+{
+  local configdir=${HOME}/.loaderctl
+
+  local service=$1
+  local action=$2
+  local scriptfile=$configdir/$service-$action.sh
+  local pwdstate=$PWD
+  if [ -r $scriptfile ]; then
+    source $scriptfile
+  fi
+  cd $pwdstate
+}
