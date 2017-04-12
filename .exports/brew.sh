@@ -9,6 +9,4 @@ pathprepend $brew_prefix/share XDG_DATA_DIRS
 
 ssource "$brew_prefix/etc/bash_completion"
 
-if which fasd > /dev/null; then eval "$(fasd --init auto)"; fi
-
 unset brew_prefix
