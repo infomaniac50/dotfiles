@@ -1,5 +1,11 @@
 # vim:set filetype=sh:
 
+command_exists()
+{
+    hash "$1" 2>/dev/null
+    return $?
+}
+
 function loader
 {
   if [[ $# -eq 0 ]]; then

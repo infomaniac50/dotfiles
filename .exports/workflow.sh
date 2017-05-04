@@ -1,11 +1,5 @@
 #!/bin/bash
 
-command_exists()
-{
-    hash "$1" 2>/dev/null
-    return $?
-}
-
 askyesno()
 {
     local QUESTION=$1
