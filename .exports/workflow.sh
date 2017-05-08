@@ -147,12 +147,19 @@ fi
 
 # Mac check
 if [ $bashos = "darwin" ]; then
-  # BSD uses environment variables
-  export CLICOLOR=1
-  export LSCOLORS="gxfxcxdxbxegedabagacad"
+    # BSD uses environment variables
+    export CLICOLOR=1
+
+    if command_exists gdircolors; then
+        # brew install coreutils
+        eval $( gdircolors -b $HOME/LS_COLORS/LS_COLORS )
+        alias ls='gls --color=auto'
+    else
+        export LSCOLORS="gxfxcxdxbxegedabagacad"
+    fi
 else
-  # BSD doesn't have the --color arg.
-  alias ls='ls --color=auto'
+    eval $( dircolors -b $HOME/LS_COLORS/LS_COLORS )
+    alias ls='ls --color=auto'
 fi
 
 alias ....='cd ../../../'
