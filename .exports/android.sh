@@ -1,6 +1,7 @@
 export ANDROID_HOME=${HOME}/prefix/opt/android-sdk
 export ANDROID_STUDIO=${HOME}/prefix/opt/android-studio
 
+pathappend $ANDROID_HOME/emulator
 pathappend $ANDROID_HOME/tools
 pathappend $ANDROID_HOME/tools/bin
 pathappend $ANDROID_HOME/platform-tools
