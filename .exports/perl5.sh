@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# vim:set filetype=sh:
 
 PATH="${HOME}/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="${HOME}/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;

@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# vim:set filetype=sh:
 
 loader askyesno
 loader find_in_ancestor

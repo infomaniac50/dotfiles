@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# vim:set filetype=sh:
 
 export ANDROID_HOME=${HOME}/prefix/opt/android-sdk
 export ANDROID_STUDIO=${HOME}/prefix/opt/android-studio

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 command_exists()

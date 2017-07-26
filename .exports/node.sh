@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 export NPM_PACKAGES="$HOME/.npm-packages"
