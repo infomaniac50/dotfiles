@@ -1,16 +1,15 @@
 #!/bin/bash
 
-source askyesno.sh
-source find_in_ancestor.sh
-source git-redo.sh
-source git-undo.sh
-source aliaslast.sh
-source gi.sh
-source meta.sh
-source alias.sh
-source arsync.sh
-source coder.sh
-
+loader askyesno
+loader find_in_ancestor
+loader git-redo
+loader git-undo
+loader aliaslast
+loader gi
+loader meta
+loader alias
+loader arsync
+loader coder
 
 # Sublimish reveal command
 # Mostly used like reveal ./; # This opens the current directory in the file browser
