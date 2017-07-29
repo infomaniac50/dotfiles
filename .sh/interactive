@@ -1,3 +1,4 @@
+#!/bin/sh
 # vim:set filetype=sh:
 
 . ~/.shell/interactive

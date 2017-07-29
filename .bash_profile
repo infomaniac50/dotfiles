@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 # We need to do two things here:

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 # this file gets run in two cases:

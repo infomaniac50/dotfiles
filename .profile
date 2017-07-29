@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 # WARNING: if you delete .bash_profile, this file becomes part of bash's startup
