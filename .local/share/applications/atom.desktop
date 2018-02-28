@@ -2,10 +2,11 @@
 Name=Atom [Composer & NPM]
 Comment=A hackable text editor for the 21st Century.
 GenericName=Text Editor
-Exec=/bin/bash -c '. ${HOME}/.phpbrew/bashrc && export PATH=${HOME}/.composer/vendor/bin:${HOME}/.npm-packages/bin:$PATH && exec /opt/atom/atom %F'
+Exec=/bin/bash -ic 'loader rvm nvm node phpbrew composer && exec /usr/bin/atom %F'
 Icon=atom
 Type=Application
 StartupNotify=true
 Categories=GNOME;GTK;Utility;TextEditor;Development;
 MimeType=text/plain;
 X-Desktop-File-Install-Version=0.22
+Terminal=false
