@@ -10,7 +10,6 @@ loader gi
 loader meta
 loader alias
 loader arsync
-loader coder
 
 # Sublimish reveal command
 # Mostly used like reveal ./; # This opens the current directory in the file browser
