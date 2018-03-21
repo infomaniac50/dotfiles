@@ -13,3 +13,5 @@
 .xinputrc filter=git-crypt diff=git-crypt
 .aws/config filter=git-crypt diff=git-crypt
 .aws/credentials filter=git-crypt diff=git-crypt
+.shell/login filter=git-crypt diff=git-crypt
+
