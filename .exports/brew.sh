@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # vim:set filetype=sh:
 
-if which brew > /dev/null; then
+if command_exists brew; then
     brew_prefix=$(brew --prefix)
     export HOMEBREW_FOUND=1
 elif [ -e $HOME/.linuxbrew/bin/brew ]; then
