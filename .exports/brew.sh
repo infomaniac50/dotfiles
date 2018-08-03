@@ -7,6 +7,9 @@ if command_exists brew; then
 elif [ -e $HOME/.linuxbrew/bin/brew ]; then
     brew_prefix=$($HOME/.linuxbrew/bin/brew --prefix)
     export HOMEBREW_FOUND=1
+elif [ -e /home/linuxbrew/.linuxbrew/bin/brew ]; then
+    brew_prefix=$(/home/linuxbrew/.linuxbrew/bin/brew --prefix)
+    export HOMEBREW_FOUND=1
 elif [ -e /usr/local/bin/brew ]; then
     brew_prefix=$(/usr/local/bin/brew --prefix)
     export HOMEBREW_FOUND=1
