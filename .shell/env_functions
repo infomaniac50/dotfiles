@@ -17,7 +17,7 @@ pathremove () {
     # Bash has ${!var}, but this is not portable.
     for dir in `indirect_expand "$var"`; do
         IFS=''
-        if [ "$dir" != "$1" ]; then
+        if [ "$dir" != "$1" ] && [ "$dir" != "" ]; then
             newpath=$newpath:$dir
         fi
     done
@@ -34,7 +34,11 @@ pathprepend () {
     #[ -d "${1}" ] || return
     local var="${2:-PATH}"
     local value=`indirect_expand "$var"`
-    export ${var}="${1}${value:+:${value}}"
+    if [ "$2" = "MANPATH" ]; then
+      export ${var}=":${1}${value:+:${value}}"
+    else
+      export ${var}="${1}${value:+:${value}}"
+    fi
 }
 
 # Usage: pathappend /path/to/bin [PATH]
@@ -45,7 +49,11 @@ pathappend () {
     #[ -d "${1}" ] || return
     local var=${2:-PATH}
     local value=`indirect_expand "$var"`
-    export $var="${value:+${value}:}${1}"
+    if [ "$2" = "MANPATH" ]; then
+      export $var=":${value:+${value}:}${1}"
+    else
+      export $var="${value:+${value}:}${1}"
+    fi
 }
 
 # Usage: ssource filename
