@@ -18,6 +18,7 @@ else
 fi
 
 if [[ $HOMEBREW_FOUND -eq 1 ]]; then
+    pathprepend $brew_prefix/sbin PATH
     pathprepend $brew_prefix/bin PATH
     pathprepend $brew_prefix/share/man MANPATH
     pathprepend $brew_prefix/share/info INFOPATH
