@@ -4,3 +4,6 @@
 [submodule "LS_COLORS"]
 	path = LS_COLORS
 	url = https://github.com/trapd00r/LS_COLORS.git
+[submodule "jessfraz/dotfiles"]
+	path = jessfraz/dotfiles
+	url = https://github.com/jessfraz/dotfiles
