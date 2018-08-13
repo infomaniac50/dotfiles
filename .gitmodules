@@ -7,3 +7,6 @@
 [submodule "jessfraz/dotfiles"]
 	path = jessfraz/dotfiles
 	url = https://github.com/jessfraz/dotfiles
+[submodule "jessfraz/dockerfiles"]
+	path = jessfraz/dockerfiles
+	url = https://github.com/jessfraz/dockerfiles.git
