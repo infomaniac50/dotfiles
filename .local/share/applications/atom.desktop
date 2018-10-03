@@ -2,7 +2,7 @@
 Name=Atom [Composer & NPM]
 Comment=A hackable text editor for the 21st Century.
 GenericName=Text Editor
-Exec=/bin/bash -ic "loader rvm nvm phpbrew composer && phpbrew use php-atom && exec /usr/bin/atom %F"
+Exec=/bin/bash -ic "export ELECTRON_TRASH=trash-cli; loader rvm nvm phpbrew composer && phpbrew use php-atom && exec /usr/bin/atom %F"
 Icon=atom
 Type=Application
 StartupNotify=true
