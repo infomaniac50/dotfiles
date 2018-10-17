@@ -6,3 +6,4 @@ export rvm_create_flag="1"
 export rvm_user_path="${HOME}/.rvm/user"
 export rvm_log_path="${HOME}/.rvm/log"
 export rvm_silence_path_mismatch_check_flag=1
+export rvm_project_rvmrc=0
