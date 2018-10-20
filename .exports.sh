@@ -5,3 +5,4 @@ ssource ${HOME}/.exports/eload.sh
 ssource ${HOME}/.exports/loader.sh
 ssource ${HOME}/.exports/secrets.sh
 ssource ${HOME}/.exports/default.sh
+ssource ${HOME}/.exports/.autoload.sh
