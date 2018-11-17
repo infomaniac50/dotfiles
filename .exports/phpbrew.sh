@@ -28,3 +28,16 @@ function dotfiles-install-php-extensions()
 		phpbrew ext install $ext
 	done
 }
+
+function dotfiles-install-php-xdebug-ini()
+{
+        if [[ -z $infomaniac50_install_php_version ]]; then
+                echo "You must set infomaniac50_install_php_version before running this script."
+                return 1
+        fi
+
+        phpbrew use $infomaniac50_install_php_version
+
+	installed_ini=$(phpbrew extension show xdebug | grep 'INI File:' | cut -f 2 -d ':')
+	cat ${HOME}/prefix/xdebug.ini > $installed_ini
+}
