@@ -8,7 +8,7 @@ all: status
 .PHONY: all
 
 install:
-	cd ../ && stow --ignore='(?:\.git|\.gitattributes|\.git-crypt|\.gitignore|README\.md|install\.sh)' dotfiles/
+	cd ../ && stow --ignore='(?:\.git|\.gitattributes|\.git-crypt|\.gitignore|README\.md|install\.sh|Makefile)' dotfiles/
 
 uninstall:
-	cd ../ && stow --ignore='(?:\.git|\.gitattributes|\.git-crypt|\.gitignore|README\.md|install\.sh)' --delete dotfiles/
+	cd ../ && stow --ignore='(?:\.git|\.gitattributes|\.git-crypt|\.gitignore|README\.md|install\.sh|Makefile)' --delete dotfiles/
