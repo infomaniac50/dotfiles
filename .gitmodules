@@ -12,4 +12,4 @@
 	url = https://github.com/jessfraz/dockerfiles.git
 [submodule "prefix"]
 	path = prefix
-	url = git@github.com:infomaniac50/prefix.git
+	url = https://github.com/infomaniac50/prefix
