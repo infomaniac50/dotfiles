@@ -1,6 +1,6 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.34 for derek on Sun Nov 13 23:22:59 2016.
-# http://www.jwz.org/xscreensaver/
+# Written by xscreensaver-demo 5.40 for derek on Sun Jan 20 22:54:22 2019.
+# https://www.jwz.org/xscreensaver/
 
 timeout:	0:05:00
 cycle:		0:10:00
@@ -261,6 +261,26 @@ programs:								      \
   GL: 				winduprobot -root			    \n\
   GL: 				splitflap -root				    \n\
 				testx11 -root				    \n\
+- GL: 				dnalogo -root				    \n\
+  GL: 				cubestack -root				    \n\
+  GL: 				cubetwist -root				    \n\
+  GL: 				discoball -root				    \n\
+  GL: 				dymaxionmap -root			    \n\
+  GL: 				energystream -root			    \n\
+  GL: 				hexstrut -root				    \n\
+  GL: 				hydrostat -root				    \n\
+  GL: 				raverhoop -root				    \n\
+  GL: 				splodesic -root				    \n\
+  GL: 				unicrud -root				    \n\
+  GL: 				esper -root				    \n\
+  GL: 				vigilance -root				    \n\
+  GL: 				crumbler -root				    \n\
+				filmleader -root			    \n\
+				glitchpeg -root				    \n\
+  GL: 				maze3d -root				    \n\
+  GL: 				peepers -root				    \n\
+  GL: 				razzledazzle -root			    \n\
+				vfeedback -root				    \n\
 
 
 pointerPollTime:    0:00:05
