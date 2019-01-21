@@ -1,5 +1,5 @@
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
-recent=
+recent=xfce-session-settings.desktop,synapse.desktop
 button-title=Applications
 button-icon=xfce4-whiskermenu
 button-single-row=false
