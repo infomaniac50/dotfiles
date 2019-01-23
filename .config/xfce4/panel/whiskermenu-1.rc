@@ -1,5 +1,5 @@
 favorites=exo-terminal-emulator.desktop,exo-file-manager.desktop,exo-mail-reader.desktop,exo-web-browser.desktop
-recent=xfce-session-settings.desktop,synapse.desktop
+recent=
 button-title=Applications
 button-icon=xfce4-whiskermenu
 button-single-row=false
@@ -13,7 +13,7 @@ hover-switch-category=false
 category-show-name=true
 category-icon-size=1
 load-hierarchy=false
-recent-items-max=10
+recent-items-max=0
 favorites-in-recent=true
 display-recent-default=false
 position-search-alternate=false
