@@ -20,6 +20,6 @@ Terminal=false
 ; --jobs=<concurrent job number>
 ;     Specifies the number of jobs to run build simultaneously (make -jN).
 ; Make sure Atom package configs also point to .phpbrew/php/php-atom.
-; 
+;
 ; You might need to purge the php-atom install before upgrading it.
 ; phpbrew purge php-atom
