@@ -1,10 +1,10 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Name=Sublime Text
+Name=Sublime Text [Composer & NPM]
 GenericName=Text Editor
 Comment=Sophisticated text editor for code, markup and prose
-Exec=/opt/sublime_text/sublime_text %F
+Exec=/bin/bash -ic "loader rvm nvm phpbrew composer && phpbrew use php-atom && exec /opt/sublime_text/sublime_text %F"
 Terminal=false
 MimeType=text/plain;
 Icon=sublime-text
