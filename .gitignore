@@ -1,3 +1,4 @@
+.config/xfce4/desktop/
 .local/share/applications/*.desktop
 .local/share/applications/mimeapps.list
 .local/share/applications/mimeinfo.cache
