@@ -7,40 +7,70 @@ command_exists()
     return $?
 }
 
-function loader_load
+function loader_loadAll
 {
-  if [[ -z $1 ]]; then
-    return 1;
+  local script
+
+  for script in "$@"; do
+    local file="${HOME}/.exports/$script.sh"
+
+    if [[ -e "$file" ]]; then
+      . "$file"
+    fi
+  done
+
+  return $?
+}
+
+function loader_show
+{
+  local script="$1"
+  local file="${HOME}/.exports/$script.sh"
+
+  if [[ -e "$file" ]]; then
+    cat "$file"
   fi
 
-  local file="${HOME}/.exports/$1.sh"
+  return $?
+}
 
-  if [[ -e $file ]]; then
-    . $file
-  fi
+function loader_list
+{
+  local scripts="${HOME}/.exports/*.sh"
+  local script
+
+  for script in $scripts; do
+    basename ${script%%.sh}
+  done
+
+  return $?
 }
 
 function loader
 {
+  local file
+  local action
+
   if [[ $# -eq 0 ]]; then
-    echo "At least one loader script argument is required."
+    echo "At least one argument is required."
     return 1;
   fi
 
-  local file
+  action="$1"
+  shift
 
-  case "$1" in
+  case "$action" in
     "list" )
-      for file in ${HOME}/.exports/*.sh; do
-        basename ${file%%.sh}
-      done
-      return 0
+      loader_list
+      return $?
       ;;
     "load" )
-      for file in "$@"; do
-        loader_load $file
-      done
-      return 0
+      loader_loadAll "$@"
+      return $?
+      ;;
+    "show" )
+      loader_show "$1"
+      return $?
       ;;
   esac
 }
