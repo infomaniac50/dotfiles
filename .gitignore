@@ -1,4 +1,5 @@
 .config/xfce4/desktop/
+.config/xfce4/xfconf/xfce-perchannel-xml/xfce4-desktop\.xml
 .local/share/applications/*.desktop
 .local/share/applications/mimeapps.list
 .local/share/applications/mimeinfo.cache
