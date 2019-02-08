@@ -7,16 +7,41 @@ command_exists()
     return $?
 }
 
+function loader_dependsAll
+{
+  local script
+  local exportName="LOADER_DEPENDS_${script^^}"
+  exportName="${exportName//[- ]/_}"
+
+  for script in "$@"; do
+    if [[ $$exportName -ne 1 ]]; then
+      loader_load "$script"
+    fi
+  done
+
+  return $?
+}
+
+function loader_load
+{
+  local file="${HOME}/.exports/$1.sh"
+  local exportName="LOADER_DEPENDS_${script^^}"
+  exportName="${exportName//[- ]/_}"
+
+  if [[ -e "$file" ]]; then
+    export $exportName=1
+    . "$file"
+  fi
+
+  return $?
+}
+
 function loader_loadAll
 {
   local script
 
   for script in "$@"; do
-    local file="${HOME}/.exports/$script.sh"
-
-    if [[ -e "$file" ]]; then
-      . "$file"
-    fi
+    loader_load "$script"
   done
 
   return $?
