@@ -7,7 +7,7 @@ command_exists()
     return $?
 }
 
-function eload
+function loader_load
 {
   if [[ -z $1 ]]; then
     return 1;
@@ -39,7 +39,7 @@ function loader
   esac
 
   for file in "$@"; do
-    eload $file
+    loader_load $file
   done
 }
 
