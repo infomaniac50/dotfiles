@@ -30,7 +30,7 @@ function loader
   local file
 
   case "$1" in
-    "--list" )
+    "list" )
       for file in ${HOME}/.exports/*.sh; do
         basename ${file%%.sh}
       done
