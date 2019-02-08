@@ -1,15 +1,15 @@
 #!/usr/bin/env bash
 # vim:set filetype=sh:
 
-loader askyesno
-loader find_in_ancestor
-loader git-redo
-loader git-undo
-loader aliaslast
-loader gi
-loader meta
-loader alias
-loader arsync
+loader load askyesno
+loader load find_in_ancestor
+loader load git-redo
+loader load git-undo
+loader load aliaslast
+loader load gi
+loader load meta
+loader load alias
+loader load arsync
 
 # Sublimish reveal command
 # Mostly used like reveal ./; # This opens the current directory in the file browser

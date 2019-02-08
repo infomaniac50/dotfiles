@@ -1,3 +1,3 @@
 #!/bin/sh
 
-loader man
+loader load man

@@ -36,11 +36,13 @@ function loader
       done
       return 0
       ;;
+    "load" )
+      for file in "$@"; do
+        loader_load $file
+      done
+      return 0
+      ;;
   esac
-
-  for file in "$@"; do
-    loader_load $file
-  done
 }
 
 function loaderctl()
