@@ -46,6 +46,20 @@ function loader_list
   return $?
 }
 
+function loader_service()
+{
+  local configdir=${HOME}/.loaderctl
+
+  local service=$1
+  local action=$2
+  local scriptfile=$configdir/$service-$action.sh
+  local pwdstate=$PWD
+  if [ -r $scriptfile ]; then
+    source $scriptfile
+  fi
+  cd $pwdstate
+}
+
 function loader
 {
   local file
@@ -72,19 +86,9 @@ function loader
       loader_show "$1"
       return $?
       ;;
+    "service" )
+      loader_service "$@"
+      return $?
+      ;;
   esac
-}
-
-function loaderctl()
-{
-  local configdir=${HOME}/.loaderctl
-
-  local service=$1
-  local action=$2
-  local scriptfile=$configdir/$service-$action.sh
-  local pwdstate=$PWD
-  if [ -r $scriptfile ]; then
-    source $scriptfile
-  fi
-  cd $pwdstate
 }
