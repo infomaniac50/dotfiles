@@ -46,15 +46,16 @@
   zoom_out = None
 [layouts]
   [[default]]
-    [[[t100]]]
+    [[[child0]]]
       order = 0
       parent = ""
       type = Window
-    [[[t800]]]
+    [[[terminal1]]]
       order = 0
-      parent = t100
+      parent = child0
       profile = default
       type = Terminal
+      uuid = 13973989-1492-4629-b441-58b38dce6cc7
 [plugins]
 [profiles]
   [[default]]
