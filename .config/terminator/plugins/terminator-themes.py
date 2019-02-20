@@ -1,0 +1,1 @@
+../../../prefix/usr/lib/terminator-themes/plugin/terminator-themes.py
