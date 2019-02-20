@@ -159,6 +159,7 @@
         <value type="string" value="zeal"/>
         <value type="string" value="caffeine"/>
         <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="syncthing"/>
         <value type="string" value="rambox"/>
         <value type="string" value="pulseaudio system tray"/>
       </property>
