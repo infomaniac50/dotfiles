@@ -7,8 +7,10 @@ all: status
 # use the 'all' rule as the default target).
 .PHONY: all
 
-install:
+install: prefix/Makefile
 	cd ../ && stow --ignore='(?:\.git|\.gitattributes|\.git-crypt|\.gitignore|.gitmodules|README\.md|install\.sh|Makefile)' dotfiles/
+	make -C prefix/ install
 
-uninstall:
+uninstall: prefix/Makefile
+	make -C prefix/ uninstall
 	cd ../ && stow --ignore='(?:\.git|\.gitattributes|\.git-crypt|\.gitignore|.gitmodules|README\.md|install\.sh|Makefile)' --delete dotfiles/
