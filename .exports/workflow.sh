@@ -9,6 +9,7 @@ loader load aliaslast
 loader load gi
 loader load meta
 loader load alias
+loader load time
 loader load arsync
 
 # Sublimish reveal command

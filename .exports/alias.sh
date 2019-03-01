@@ -56,9 +56,3 @@ alias lsdir='ls -d */'
 alias lmount='mount | column -t'
 alias ports='netstat -tulanp'
 alias zlist='tar --list -zf'
-
-# Current 24 hour time
-alias now='date +"%T"'
-
-# Current unix timestamp
-alias stamp='date +"%s"'
