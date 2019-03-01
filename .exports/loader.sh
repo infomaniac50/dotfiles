@@ -117,3 +117,6 @@ function loader
       ;;
   esac
 }
+
+alias lol="loader load"
+alias los="loader service"
