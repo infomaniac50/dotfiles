@@ -79,7 +79,7 @@
     </property>
     <property name="plugin-7" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="file:///home/derek/.local/share/applications/sublime_text.desktop"/>
+        <value type="string" value="15514187281.desktop"/>
       </property>
     </property>
     <property name="plugin-8" type="string" value="launcher">

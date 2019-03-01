@@ -1,0 +1,24 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Sublime Text [Composer & NPM]
+GenericName=Text Editor
+Comment=Sophisticated text editor for code, markup and prose
+Exec=/bin/bash -ic "loader load rvm nvm phpbrew composer && phpbrew use php-atom && exec /opt/sublime_text/sublime_text %F"
+Terminal=false
+MimeType=text/plain;
+Icon=sublime-text
+Categories=TextEditor;Development;
+StartupNotify=true
+Actions=Window;Document;
+X-XFCE-Source=file:///home/derek/.local/share/applications/sublime_text.desktop
+
+[Desktop Action Window]
+Name=New Window
+Exec=/opt/sublime_text/sublime_text -n
+OnlyShowIn=Unity;
+
+[Desktop Action Document]
+Name=New File
+Exec=/opt/sublime_text/sublime_text --command new_file
+OnlyShowIn=Unity;
