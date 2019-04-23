@@ -117,22 +117,23 @@
     <property name="plugin-16" type="string" value="notification-plugin"/>
     <property name="plugin-17" type="string" value="systray">
       <property name="names-visible" type="array">
-        <value type="string" value="vlc"/>
-        <value type="string" value="networkmanager applet"/>
-        <value type="string" value="telegramdesktop"/>
-        <value type="string" value="pasystray"/>
-        <value type="string" value="synapse"/>
-        <value type="string" value="syncthing-gtk"/>
-        <value type="string" value="duplicati.gui.trayicon"/>
-        <value type="string" value="blueman-applet"/>
         <value type="string" value="synergy"/>
-        <value type="string" value="solaar"/>
-        <value type="string" value="zeal"/>
-        <value type="string" value="caffeine"/>
-        <value type="string" value="xfce4-power-manager"/>
         <value type="string" value="syncthing"/>
-        <value type="string" value="rambox"/>
+        <value type="string" value="pasystray"/>
         <value type="string" value="pulseaudio system tray"/>
+        <value type="string" value="duplicati.gui.trayicon"/>
+        <value type="string" value="synapse"/>
+        <value type="string" value="solaar"/>
+        <value type="string" value="networkmanager applet"/>
+        <value type="string" value="vlc"/>
+        <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="syncthing-gtk"/>
+        <value type="string" value="telegramdesktop"/>
+        <value type="string" value="blueman-applet"/>
+        <value type="string" value="rambox"/>
+        <value type="string" value="caffeine"/>
+        <value type="string" value="zeal"/>
+        <value type="string" value="dropbox"/>
       </property>
       <property name="show-frame" type="bool" value="false"/>
       <property name="size-max" type="uint" value="24"/>
