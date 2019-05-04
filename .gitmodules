@@ -13,3 +13,6 @@
 [submodule "prefix"]
 	path = prefix
 	url = https://github.com/infomaniac50/prefix
+[submodule "usr/local/src/disk-burnin-and-testing"]
+	path = usr/local/src/disk-burnin-and-testing
+	url = https://github.com/Spearfoot/disk-burnin-and-testing
