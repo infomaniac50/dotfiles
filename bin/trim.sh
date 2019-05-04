@@ -24,9 +24,9 @@ set -x
 # Write everything to disk before starting fstrim.
 sync
 # I'm not sure sync is enough for btrfs.
-btrfs filesystem sync /albert
+btrfs filesystem sync /data
 
 # Limiting discard length to 1 megabyte speeds up the trim and reduces wear a little bit.
 fstrim --minimum 1MiB --verbose /
 fstrim --minimum 1MiB --verbose /home
-fstrim --minimum 1MiB --verbose /albert
+fstrim --minimum 1MiB --verbose /data
