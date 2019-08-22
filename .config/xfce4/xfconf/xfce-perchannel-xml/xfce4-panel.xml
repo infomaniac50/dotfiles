@@ -32,18 +32,19 @@
         <value type="int" value="18"/>
         <value type="int" value="19"/>
         <value type="int" value="20"/>
+        <value type="int" value="21"/>
       </property>
       <property name="output-name" type="string" value="Primary"/>
     </property>
     <property name="panel-2" type="empty">
       <property name="position" type="string" value="p=8;x=800;y=884"/>
       <property name="plugin-ids" type="array">
-        <value type="int" value="21"/>
         <value type="int" value="22"/>
         <value type="int" value="23"/>
         <value type="int" value="24"/>
         <value type="int" value="25"/>
         <value type="int" value="26"/>
+        <value type="int" value="27"/>
       </property>
       <property name="size" type="uint" value="30"/>
       <property name="length" type="uint" value="100"/>
@@ -97,28 +98,33 @@
     </property>
     <property name="plugin-10" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="15480546289.desktop"/>
-        <value type="string" value="15560599062.desktop"/>
+        <value type="string" value="15665180862.desktop"/>
       </property>
     </property>
     <property name="plugin-11" type="string" value="launcher">
       <property name="items" type="array">
-        <value type="string" value="154805467010.desktop"/>
+        <value type="string" value="15480546289.desktop"/>
+        <value type="string" value="15560599062.desktop"/>
       </property>
     </property>
     <property name="plugin-12" type="string" value="launcher">
       <property name="items" type="array">
+        <value type="string" value="154805467010.desktop"/>
+      </property>
+    </property>
+    <property name="plugin-13" type="string" value="launcher">
+      <property name="items" type="array">
         <value type="string" value="154805469111.desktop"/>
       </property>
     </property>
-    <property name="plugin-13" type="string" value="separator">
+    <property name="plugin-14" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-14" type="string" value="xfce4-sensors-plugin"/>
-    <property name="plugin-15" type="string" value="xfce4-clipman-plugin"/>
-    <property name="plugin-16" type="string" value="notification-plugin"/>
-    <property name="plugin-17" type="string" value="systray">
+    <property name="plugin-15" type="string" value="xfce4-sensors-plugin"/>
+    <property name="plugin-16" type="string" value="xfce4-clipman-plugin"/>
+    <property name="plugin-17" type="string" value="notification-plugin"/>
+    <property name="plugin-18" type="string" value="systray">
       <property name="names-visible" type="array">
         <value type="string" value="synergy"/>
         <value type="string" value="syncthing"/>
@@ -141,11 +147,11 @@
       <property name="show-frame" type="bool" value="false"/>
       <property name="size-max" type="uint" value="24"/>
     </property>
-    <property name="plugin-18" type="string" value="clock">
+    <property name="plugin-19" type="string" value="clock">
       <property name="digital-format" type="string" value="%I:%M %p"/>
     </property>
-    <property name="plugin-19" type="string" value="systemload"/>
-    <property name="plugin-20" type="string" value="actions">
+    <property name="plugin-20" type="string" value="systemload"/>
+    <property name="plugin-21" type="string" value="actions">
       <property name="appearance" type="uint" value="0"/>
       <property name="items" type="array">
         <value type="string" value="-lock-screen"/>
@@ -161,18 +167,18 @@
         <value type="string" value="-logout-dialog"/>
       </property>
     </property>
-    <property name="plugin-21" type="string" value="showdesktop"/>
-    <property name="plugin-22" type="string" value="tasklist">
+    <property name="plugin-22" type="string" value="showdesktop"/>
+    <property name="plugin-23" type="string" value="tasklist">
       <property name="show-handle" type="bool" value="false"/>
       <property name="show-wireframes" type="bool" value="true"/>
     </property>
-    <property name="plugin-23" type="string" value="separator">
+    <property name="plugin-24" type="string" value="separator">
       <property name="expand" type="bool" value="true"/>
       <property name="style" type="uint" value="0"/>
     </property>
-    <property name="plugin-24" type="string" value="netload"/>
     <property name="plugin-25" type="string" value="netload"/>
-    <property name="plugin-26" type="string" value="pager">
+    <property name="plugin-26" type="string" value="netload"/>
+    <property name="plugin-27" type="string" value="pager">
       <property name="rows" type="uint" value="1"/>
     </property>
     <property name="clipman" type="empty">
