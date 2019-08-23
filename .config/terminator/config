@@ -76,7 +76,6 @@
     use_system_font = False
     visible_bell = True
   [[PaulMillr]]
-    allow_bold = False
     audible_bell = True
     autoclean_groups = False
     background_darkness = 0.8
