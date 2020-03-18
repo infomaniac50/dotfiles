@@ -33,5 +33,3 @@ if [ -t 0 ]; then
 #    if [ `tput colors` -ge 8 ]; then
 #    fi
 fi
-
-. $HOME/.exports.sh
