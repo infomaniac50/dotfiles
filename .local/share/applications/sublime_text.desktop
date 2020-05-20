@@ -11,6 +11,7 @@ Icon=sublime-text
 Categories=TextEditor;Development;
 StartupNotify=true
 Actions=Window;Document;
+X-XFCE-Source=file:///home/derek/.local/share/applications/sublime_text.desktop
 
 [Desktop Action Window]
 Name=New Window
