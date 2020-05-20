@@ -22,3 +22,4 @@ OnlyShowIn=Unity;
 Name=New File
 Exec=/opt/sublime_text/sublime_text --command new_file
 OnlyShowIn=Unity;
+; Add a line starting with a semicolon to stop xfce from copying the launcher to the plugin folder when it is edited.
