@@ -40,6 +40,7 @@ if [ $bashos = "darwin" ]; then
 else
     eval $( dircolors -b $HOME/LS_COLORS/LS_COLORS )
     alias ls='ls --color=auto'
+    alias dir='dir --color=auto'
 fi
 
 alias ....='cd ../../../'
