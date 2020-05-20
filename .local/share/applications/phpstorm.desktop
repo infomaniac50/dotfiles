@@ -9,5 +9,3 @@ Categories=Development;IDE;
 Terminal=false
 StartupWMClass=jetbrains-phpstorm
 X-XFCE-Source=file:///usr/share/applications/jetbrains-phpstorm.desktop
-Path=
-StartupNotify=false
