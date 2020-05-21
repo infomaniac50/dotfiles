@@ -1,5 +1,5 @@
 # XScreenSaver Preferences File
-# Written by xscreensaver-demo 5.40 for derek on Sun Jan 20 22:54:22 2019.
+# Written by xscreensaver-demo 5.44 for derek on Wed Apr 29 20:47:20 2020.
 # https://www.jwz.org/xscreensaver/
 
 timeout:	0:05:00
@@ -281,6 +281,12 @@ programs:								      \
   GL: 				peepers -root				    \n\
   GL: 				razzledazzle -root			    \n\
 				vfeedback -root				    \n\
+				scooter -root				    \n\
+  GL: 				handsy -root				    \n\
+  GL: 				deepstars -root				    \n\
+  GL: 				gravitywell -root			    \n\
+  GL: 				etruscanvenus -root			    \n\
+  GL: 				gibson -root				    \n\
 
 
 pointerPollTime:    0:00:05
