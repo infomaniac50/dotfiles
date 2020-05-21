@@ -1,0 +1,23 @@
+#!/bin/bash
+
+virtualdisplay setRes VIRTUAL1 1600 900 HDMI1 >/dev/null 2>/dev/null
+
+virtualdisplay start 2 >/dev/null 2>/dev/null &
+VD_PID=$!
+
+# trap ctrl-c and call ctrl_c()
+trap ctrl_c INT
+
+function ctrl_c() {
+    echo ""
+    echo "Caught CTRL-C"
+    echo -n "Exiting..."
+    kill -s SIGINT $VD_PID
+}
+
+echo "Background process running"
+echo "Press CTRL-C to exit..."
+wait
+
+virtualdisplay clean 1 >/dev/null 2>/dev/null
+echo "Done"
