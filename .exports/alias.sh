@@ -17,7 +17,7 @@ fi
 
 fi
 
-bashos=$(echo $OSTYPE | sed s/darwin.*/darwin/)
+bashos=$(echo $OSTYPE | sed -e 's/darwin.*/darwin/')
 if [ $bashos != "msys" ]; then
     # Don't alias this on Windows as it causes problems with the native ping.
     alias fastping='ping -c 100 -i .2'
