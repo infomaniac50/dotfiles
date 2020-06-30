@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 command_exists()
@@ -7,12 +6,12 @@ command_exists()
     return $?
 }
 
-function loader_dependsAll
+loader_dependsAll()
 {
   local script
-  local exportName="LOADER_DEPENDS_${script^^}"
-  exportName="${exportName//[- ]/_}"
-
+  local exportName=$(echo "LOADER_DEPENDS_${script}" | sed -e 's/[a-z]/\U&/g')
+  exportName=$(echo "$exportName" | sed -e 's/[- ]/_/g')
+	
   for script in "$@"; do
     if [[ $$exportName -ne 1 ]]; then
       loader_load "$script"
@@ -22,11 +21,11 @@ function loader_dependsAll
   return $?
 }
 
-function loader_load
+loader_load()
 {
-  local file="${HOME}/.exports/$1.sh"
-  local exportName="LOADER_DEPENDS_${script^^}"
-  exportName="${exportName//[- ]/_}"
+  file="${HOME}/.exports/$1.sh"
+  local exportName=$(echo "LOADER_DEPENDS_${script}" | sed -e 's/[a-z]/\U&/g')
+  exportName=$(echo "$exportName" | sed -e 's/[- ]/_/g')
 
   if [[ -e "$file" ]]; then
     export $exportName=1
@@ -36,7 +35,7 @@ function loader_load
   return $?
 }
 
-function loader_loadAll
+loader_loadAll()
 {
   local script
 
@@ -47,7 +46,7 @@ function loader_loadAll
   return $?
 }
 
-function loader_show
+loader_show()
 {
   local script="$1"
   local file="${HOME}/.exports/$script.sh"
@@ -59,7 +58,7 @@ function loader_show
   return $?
 }
 
-function loader_list
+loader_list()
 {
   local scripts="${HOME}/.exports/*.sh"
   local script
@@ -71,7 +70,7 @@ function loader_list
   return $?
 }
 
-function loader_service()
+loader_service()
 {
   local configdir=${HOME}/.loaderctl
 
@@ -85,7 +84,7 @@ function loader_service()
   cd $pwdstate
 }
 
-function loader
+loader()
 {
   local file
   local action

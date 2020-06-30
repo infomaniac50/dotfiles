@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 # Unset manpath so we can inherit from /etc/manpath via the `manpath` command

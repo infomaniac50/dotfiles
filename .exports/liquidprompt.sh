@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 # This is the lambda character from the Half-Life video game series.

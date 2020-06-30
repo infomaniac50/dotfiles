@@ -1,8 +1,6 @@
-#!/usr/bin/env bash
 # vim:set filetype=sh:
 
-ssource ${HOME}/.exports/eload.sh
-ssource ${HOME}/.exports/loader.sh
-ssource ${HOME}/.exports/secrets.sh
-ssource ${HOME}/.exports/default.sh
-ssource ${HOME}/.exports/.autoload.sh
+source $HOME/.exports/loader.sh
+source $HOME/.exports/secrets.sh
+source $HOME/.exports/default.sh
+source $HOME/.exports/.autoload.sh

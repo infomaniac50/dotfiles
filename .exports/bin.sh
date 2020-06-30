@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 if [[ -d $HOME/bin ]]; then

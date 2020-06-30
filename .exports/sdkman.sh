@@ -1,4 +1,3 @@
-#!/usr/bin/env bash
 # vim:set filetype=sh:
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
