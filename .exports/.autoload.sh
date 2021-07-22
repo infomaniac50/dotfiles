@@ -1,3 +1,3 @@
 #!/bin/sh
 
-loader load man
+loader load man gpg
