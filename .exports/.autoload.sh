@@ -1,3 +1,3 @@
 #!/bin/sh
 
-loader load man gpg
+loader load hostname man gpg
