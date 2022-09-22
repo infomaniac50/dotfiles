@@ -2,3 +2,4 @@
 .local/share/applications/mimeapps.list
 .local/share/applications/mimeinfo.cache
 *.zip
+.zsh/cache/
