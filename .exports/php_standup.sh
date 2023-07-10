@@ -8,7 +8,7 @@ function php_standup()
 		return 1;
 	fi
 
-	if [[ $(read -q "REPLY?Should OpenSSL v1 be used instead of v3? [Y/n] ") ]]; then
+	if [[ $(read -qs "REPLY?Should OpenSSL v1 be used instead of v3? [Y/n]") ]]; then
 		export LDFLAGS=-L/usr/lib/openssl-1.1/
 		export CPPFLAGS=-I/usr/include/openssl-1.1/
 	fi
@@ -16,21 +16,21 @@ function php_standup()
 
 	phpbrew install --jobs=2 $php_version $(cat ~/prefix/phpbrew-variants.txt)
 
-	if [[ $? && $(read -q "REPLY?The previous command returned an error. Continue? [Y/n] ") ]]; then
+	if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
 		return 1;
 	fi
 	echo ""
 
 	phpbrew switch $php_version
 
-	if [[ $? && $(read -q "REPLY?The previous command returned an error. Continue? [Y/n] ") ]]; then
+	if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
 		return 1;
 	fi
 	echo ""
 
 	phpbrew ext enable opcache
 
-	if [[ $? && $(read -q "REPLY?The previous command returned an error. Continue? [Y/n] ") ]]; then
+	if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
 		return 1;
 	fi
 	echo ""
@@ -41,7 +41,7 @@ function php_standup()
 		if [ ! -z $php_extension ]; then
 			phpbrew ext install $php_extension
 
-			if [[ $? && $(read -q "REPLY?The previous command returned an error. Continue? [Y/n] ") ]]; then
+			if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
 				return 1;
 			fi
 			echo ""
