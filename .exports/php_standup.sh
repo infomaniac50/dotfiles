@@ -8,30 +8,55 @@ function php_standup()
 		return 1;
 	fi
 
-	if [[ $(read -qs "REPLY?Should OpenSSL v1 be used instead of v3? [Y/n]") ]]; then
+	local yesno
+
+	read -qs "REPLY?Should OpenSSL v1 be used instead of v3? [Y/n]"
+	yesno=$?
+
+	echo ""
+	if [[ $yesno ]]; then
 		export LDFLAGS=-L/usr/lib/openssl-1.1/
 		export CPPFLAGS=-I/usr/include/openssl-1.1/
+		echo "OpenSSL v1 will be used."
+		echo "LDFLAGS=$LDFLAGS"
+		echo "CPPFLAGS=$CPPFLAGS"
+	else
+		echo "OpenSSL v3 will be used."
 	fi
-	echo ""
 
 	phpbrew install --jobs=2 $php_version $(cat ~/prefix/phpbrew-variants.txt)
 
-	if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
-		return 1;
+	yesno=$?
+	if [[ ! $yesno ]]; then
+		read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
+		yesno=$?
+		if [[ ! $yesno ]]; then
+			return 1;
+		fi
 	fi
 	echo ""
 
 	phpbrew switch $php_version
 
-	if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
-		return 1;
+	yesno=$?
+	if [[ ! $yesno ]]; then
+		read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
+		yesno=$?
+		if [[ ! $yesno ]]; then
+			return 1;
+		fi
 	fi
 	echo ""
 
 	phpbrew ext enable opcache
 
-	if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
-		return 1;
+	yesno=$?
+	if [[ ! $yesno ]]; then
+		read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
+		yesno=$?
+		if [[ ! $yesno ]]; then
+			return 1;
+		fi
 	fi
 	echo ""
 
@@ -41,10 +66,16 @@ function php_standup()
 		if [ ! -z $php_extension ]; then
 			phpbrew ext install $php_extension
 
-			if [[ $? && $(read -qs "REPLY?The previous command returned an error. Continue? [Y/n]") ]]; then
-				return 1;
+			yesno=$?
+			if [[ ! $yesno ]]; then
+				read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
+				yesno=$?
+				if [[ ! $yesno ]]; then
+					return 1;
+				fi
 			fi
 			echo ""
+
 		fi
 	done < ~/prefix/phpbrew-extensions.txt
 
