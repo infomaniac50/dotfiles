@@ -1,6 +1,7 @@
 function php_standup()
 {
 	local php_version=$1
+	local yesno=$(/bin/false)
 
 	if [ -z $php_version ]; then
 		echo "You must specify a PHP version string."
@@ -8,13 +9,10 @@ function php_standup()
 		return 1;
 	fi
 
-	local yesno
-
 	read -qs "REPLY?Should OpenSSL v1 be used instead of v3? [Y/n]"
 	yesno=$?
-
 	echo ""
-	if [[ $yesno ]]; then
+	if [[ $yesno -eq 0 ]]; then
 		export LDFLAGS=-L/usr/lib/openssl-1.1/
 		export CPPFLAGS=-I/usr/include/openssl-1.1/
 		echo "OpenSSL v1 will be used."
@@ -23,38 +21,35 @@ function php_standup()
 	else
 		echo "OpenSSL v3 will be used."
 	fi
-
+	
 	phpbrew install --jobs=2 $php_version $(cat ~/prefix/phpbrew-variants.txt)
-
 	yesno=$?
-	if [[ ! $yesno ]]; then
+	if [[ $yesno -ne 0 ]]; then
 		read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
 		yesno=$?
-		if [[ ! $yesno ]]; then
+		if [[ $yesno -ne 0 ]]; then
 			return 1;
 		fi
 	fi
 	echo ""
 
 	phpbrew switch $php_version
-
 	yesno=$?
-	if [[ ! $yesno ]]; then
+	if [[ $yesno -ne 0 ]]; then
 		read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
 		yesno=$?
-		if [[ ! $yesno ]]; then
+		if [[ $yesno -ne 0 ]]; then
 			return 1;
 		fi
 	fi
 	echo ""
 
 	phpbrew ext enable opcache
-
 	yesno=$?
-	if [[ ! $yesno ]]; then
+	if [[ $yesno -ne 0 ]]; then
 		read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
 		yesno=$?
-		if [[ ! $yesno ]]; then
+		if [[ $yesno -ne 0 ]]; then
 			return 1;
 		fi
 	fi
@@ -65,12 +60,11 @@ function php_standup()
 	do
 		if [ ! -z $php_extension ]; then
 			phpbrew ext install $php_extension
-
 			yesno=$?
-			if [[ ! $yesno ]]; then
+			if [[ $yesno -ne 0 ]]; then
 				read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
 				yesno=$?
-				if [[ ! $yesno ]]; then
+				if [[ $yesno -ne 0 ]]; then
 					return 1;
 				fi
 			fi
