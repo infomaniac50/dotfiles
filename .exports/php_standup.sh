@@ -1,9 +1,11 @@
 function php_standup()
 {
+	setopt local_traps local_options
+
 	local php_version=$1
 	local yesno=$(/bin/false)
 
-	if [ -z $php_version ]; then
+	if [ -z "$php_version" ]; then
 		echo "You must specify a PHP version string."
 		echo "See Also: phpbrew known"
 		return 1;
@@ -21,9 +23,25 @@ function php_standup()
 	else
 		echo "OpenSSL v3 will be used."
 	fi
-	
-	phpbrew install --jobs=2 $php_version $(cat ~/prefix/phpbrew-variants.txt)
+
+	read -r -a variants < ~/prefix/phpbrew-variants.txt
+	phpbrew install --jobs=2 "$php_version" "${variants[@]}" &
+	PHPBREW_PID=$!
+
+	while [[ ! -e "${HOME}/.phpbrew/build/${php_version}/build.log" ]]; do
+		sleep 1
+	done
+
+	tail -F "${HOME}/.phpbrew/build/${php_version}/build.log" &
+	TAIL_LOG_PID=$!
+
+	trap '[[ -n $PHPBREW_PID ]] && kill -INT $PHPBREW_PID' INT
+	wait $PHPBREW_PID
 	yesno=$?
+
+	kill $TAIL_LOG_PID
+	trap -
+
 	if [[ $yesno -ne 0 ]]; then
 		read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
 		yesno=$?
@@ -56,10 +74,10 @@ function php_standup()
 	echo ""
 
 	local php_extension
-	while read php_extension
+	while IFS= read -r php_extension
 	do
-		if [ ! -z $php_extension ]; then
-			phpbrew ext install $php_extension
+		if [[ -n "$php_extension" ]]; then
+			phpbrew ext install "$php_extension"
 			yesno=$?
 			if [[ $yesno -ne 0 ]]; then
 				read -qs "REPLY?The previous command returned an error. Continue? [Y/n]"
